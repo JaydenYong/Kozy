@@ -1,18 +1,23 @@
 import webbrowser as wb
-import os,atexit
+import os,atexit,time
 
 class App():
-    def __init__(self,filename="main"):
+    def __init__(self,filename="main",auto_delete=False):
         self.filename = filename + ".html"
+        self.auto_delete = auto_delete
         self.writeHTML("<html>\n\t<body>\n\t\n</body>\n</html>")
 
-        atexit.register(self.delFile())
+        if self.auto_delete == True:
+            atexit.register(self.delFile)
+        else:
+            atexit.unregister(self.delFile)
     
     def run(self):
         wb.open(self.filename)
         
     def delFile(self):
         if os.path.exists(self.filename):
+            time.sleep(5)
             os.remove(self.filename)
         else:
             raise FileExistsError(f"{self.filename} does not exist.")
@@ -24,4 +29,5 @@ class App():
     def Header(self,size,content):
         pass
 
-my_app = App()
+my_app = App("lol",True)
+my_app.run()
