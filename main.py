@@ -25,5 +25,3 @@ class App():
         pass
 
 my_app = App()
-
-print("lol")
