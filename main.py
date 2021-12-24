@@ -34,6 +34,9 @@ my_app = App("lol",True)
 my_app.run()
 =======
 my_app = App()
+<<<<<<< HEAD
 
 print("lol")
 >>>>>>> 2fa919bec7a218db3becdde1c26274a869cf5ad7
+=======
+>>>>>>> 980c71254a58cf1c9075652a675b08489f0ca4d7
