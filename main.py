@@ -29,5 +29,11 @@ class App():
     def Header(self,size,content):
         pass
 
+<<<<<<< HEAD
 my_app = App("lol",True)
 my_app.run()
+=======
+my_app = App()
+
+print("lol")
+>>>>>>> 2fa919bec7a218db3becdde1c26274a869cf5ad7
